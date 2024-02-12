@@ -1,0 +1,16 @@
+
+---
+spring:
+  config.activate.on-profile: default
+  sql.init.schema-locations: classpath:schema-h2.sql
+cds:
+  datasource.auto-config.enabled: false
+
+---  
+spring:
+  config.activate.on-profile: cloud
+cds:
+  remote.services:
+    API_BUSINESS_PARTNER:
+      destination:
+        type: "odata-v4"
