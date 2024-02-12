@@ -1,0 +1,4 @@
+@server=http://localhost:8080/odata/v4/BooksService
+
+###
+GET {{server}}/MyBooks
