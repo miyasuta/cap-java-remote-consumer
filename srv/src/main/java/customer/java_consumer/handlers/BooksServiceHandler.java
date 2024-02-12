@@ -15,6 +15,9 @@ import cds.gen.booksservice.BooksService_;
 import cds.gen.booksservice.MyBooks_;
 import cds.gen.catalogservice.CatalogService_;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Component
 @ServiceName(BooksService_.CDS_NAME)
 public class BooksServiceHandler implements EventHandler{
@@ -22,8 +25,11 @@ public class BooksServiceHandler implements EventHandler{
     @Qualifier(CatalogService_.CDS_NAME)
     CqnService catalog;
 
+    Logger logger = LoggerFactory.getLogger(BooksServiceHandler.class);
+
     @On(event = CqnService.EVENT_READ, entity = MyBooks_.CDS_NAME)
     public Result readBooks(CdsReadEventContext context) {
+        logger.info("read handler called");
         return catalog.run(context.getCqn());
     }
 }
