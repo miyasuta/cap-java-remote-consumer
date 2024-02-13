@@ -1,4 +1,4 @@
-package customer.java_consumer.handlers.config;
+package customer.java_consumer.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
