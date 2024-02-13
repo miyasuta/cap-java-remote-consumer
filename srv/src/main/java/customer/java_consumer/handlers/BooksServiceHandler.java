@@ -12,7 +12,7 @@ import com.sap.cds.services.handler.annotations.On;
 import com.sap.cds.services.handler.annotations.ServiceName;
 
 import cds.gen.booksservice.BooksService_;
-import cds.gen.booksservice.MyBooks_;
+import cds.gen.booksservice.Books_;
 import cds.gen.catalogservice.CatalogService_;
 
 import org.slf4j.Logger;
@@ -27,7 +27,7 @@ public class BooksServiceHandler implements EventHandler{
 
     Logger logger = LoggerFactory.getLogger(BooksServiceHandler.class);
 
-    @On(event = CqnService.EVENT_READ, entity = MyBooks_.CDS_NAME)
+    @On(event = CqnService.EVENT_READ, entity = Books_.CDS_NAME)
     public Result readBooks(CdsReadEventContext context) {
         logger.info("read handler called");
         return catalog.run(context.getCqn());
