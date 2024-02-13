@@ -12,7 +12,7 @@ spring:
   sql.init.schema-locations: classpath:schema-nomocks.sql
 cds:
   remote.services:
-    API_BUSINESS_PARTNER:
+    CatalogService:
       destination:
         type: "odata-v4"
 
