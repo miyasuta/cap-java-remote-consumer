@@ -1,7 +1,7 @@
 @authurl=https://4395c46atrial.authentication.us10.hana.ondemand.com
 @clientId=sb-java-consumer-4395c46atrial-dev!t230421
 @clientSecret=od/ZmJQIoAPtqZZ787yoiZhMRAE=
-@appurl=4395c46atrial-dev-java-simple-srv.cfapps.us10-001.hana.ondemand.com
+@appurl=4395c46atrial-dev-java-consumer-srv.cfapps.us10-001.hana.ondemand.com
 
 ### Get JWT token
 # @name getCredentials
@@ -12,3 +12,4 @@ Authorization: Basic {{clientId}} {{clientSecret}}
 
 ###
 GET {{appurl}}/odata/v4/BooksService/Books
+Authorization: Bearer {{token}}

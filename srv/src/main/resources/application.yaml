@@ -9,7 +9,7 @@ cds:
 ---  
 spring:
   config.activate.on-profile: cloud
-  sql.init.schema-locations: classpath:schema-nomocks.sql
+  # sql.init.schema-locations: classpath:schema-nomocks.sql
 cds:
   remote.services:
     CatalogService:
@@ -30,13 +30,14 @@ cds:
   remote.services:
     CatalogService:
       destination:
-        name: "catalogservice-mocked"        
+        name: "catalogservice-mocked"
+        suffix: "/odata/v4" 
 
 ---
 spring:
   config.activate.on-profile: hybrid
-  sql.init.schema-locations:
-  - "classpath:schema-nomocks.sql"
+  # sql.init.schema-locations:
+  # - "classpath:schema-nomocks.sql"
 cds:
   remote.services:
     CatalogService:
