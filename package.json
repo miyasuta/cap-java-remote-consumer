@@ -11,5 +11,8 @@
         "model": "srv/external/CatalogService"
       }
     }
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^7"
   }
 }

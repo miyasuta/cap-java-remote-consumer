@@ -1,4 +1,4 @@
-@server=http://localhost:8080/odata/v4/BooksService
+@server=http://localhost:8080
 
 ###
-GET {{server}}/Books
+GET {{server}}/odata/v4/BooksService/Books

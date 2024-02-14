@@ -15,6 +15,8 @@ cds:
     CatalogService:
       destination:
         type: "odata-v4"
+        suffix: "/odata/v4"
+        name: "catalogservice"
 
 ---
 spring:
@@ -31,6 +33,19 @@ cds:
         name: "catalogservice-mocked"        
 
 ---
-logging:
-  level:
-    root: DEBUG        
+spring:
+  config.activate.on-profile: hybrid
+  sql.init.schema-locations:
+  - "classpath:schema-nomocks.sql"
+cds:
+  remote.services:
+    CatalogService:
+      destination:
+        type: "odata-v4"
+        suffix: "/odata/v4"
+        name: "catalogservice"
+
+# ---
+# logging:
+#   level:
+#     root: DEBUG        
