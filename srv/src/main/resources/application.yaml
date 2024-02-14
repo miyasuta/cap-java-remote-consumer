@@ -28,7 +28,8 @@ cds:
   remote.services:
     CatalogService:
       destination:
-        name: "catalogservice-mocked"        
+        name: "catalogservice-mocked"
+        suffix: "/odata/v4"    
 
 ---
 logging:

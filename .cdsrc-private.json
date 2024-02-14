@@ -1,0 +1,21 @@
+{
+  "requires": {
+    "[hybrid]": {
+      "java-consumer-destination": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "4395c46atrial",
+          "space": "dev",
+          "instance": "java-consumer-auth",
+          "key": "java-consumer-auth-key",
+          "resolved": false
+        },
+        "kind": "xsuaa-auth",
+        "vcap": {
+          "name": "java-consumer-destination"
+        }
+      }
+    }
+  }
+}
