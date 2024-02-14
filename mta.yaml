@@ -26,6 +26,19 @@ modules:
     requires:
       - name: java-consumer-destination
       - name: java-consumer-auth
+      - name: java-consumer-db
+
+  - name: java-consumer-db-deployer
+    type: hdb
+    path: db
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: custom
+      commands:
+        - npm run build
+    requires:
+      - name: java-consumer-db
 
 resources:
   - name: java-consumer-destination
@@ -42,3 +55,8 @@ resources:
       config:
         xsappname: java-consumer-${org}-${space}
         tenant-mode: dedicated
+  - name: java-consumer-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared

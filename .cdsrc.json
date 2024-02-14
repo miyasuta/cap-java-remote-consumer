@@ -1,7 +1,8 @@
 {
   "requires": {
     "[production]": {
-      "auth": "xsuaa"
+      "auth": "xsuaa",
+      "db": "hana"
     }
   }
 }

@@ -2,3 +2,6 @@
 
 ###
 GET {{server}}/odata/v4/BooksService/Books
+
+###
+GET {{server}}/odata/v4/BooksService/Customers

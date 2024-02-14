@@ -36,8 +36,7 @@ cds:
 ---
 spring:
   config.activate.on-profile: hybrid
-  # sql.init.schema-locations:
-  # - "classpath:schema-nomocks.sql"
+  sql.init.schema-locations: classpath:schema-nomocks.sql
 cds:
   remote.services:
     CatalogService:

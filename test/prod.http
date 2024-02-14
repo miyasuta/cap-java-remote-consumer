@@ -13,3 +13,17 @@ Authorization: Basic {{clientId}} {{clientSecret}}
 ###
 GET {{appurl}}/odata/v4/BooksService/Books
 Authorization: Bearer {{token}}
+
+###
+GET {{appurl}}/odata/v4/BooksService/Customers
+Authorization: Bearer {{token}}
+
+###
+POST {{appurl}}/odata/v4/BooksService/Customers
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "ID": 3,
+    "name": "Production 1"
+}
