@@ -2,3 +2,15 @@
 
 ###
 GET {{server}}/odata/v4/BooksService/Books
+
+###
+POST {{server}}/odata/v4/BooksService/createBook
+Content-Type: application/json
+
+{
+    "book": {
+        "ID": 10,
+        "title": "My Test",
+        "stock": 99
+    }
+}
