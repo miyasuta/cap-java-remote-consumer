@@ -1,9 +1,6 @@
-/* checksum : 503661f7b24bb4f4c8b62738414d9b70 */
+/* checksum : 293989577f835270c4e9059efd5aca20 */
 @cds.external : true
 @cds.persistence.skip : true
-@Capabilities.DeleteRestrictions.Deletable : false
-@Capabilities.InsertRestrictions.Insertable : false
-@Capabilities.UpdateRestrictions.Updatable : false
 entity CatalogService.Books {
   key ID : Integer not null;
   title : LargeString;

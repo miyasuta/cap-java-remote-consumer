@@ -9,8 +9,16 @@ Content-Type: application/json
 
 {
     "book": {
-        "ID": 10,
+        "ID": 11,
         "title": "My Test",
         "stock": 99
     }
+}
+
+### 
+POST {{server}}/odata/v4/BooksService/Books(1)/BooksService.updateStock
+Content-Type: application/json
+
+{
+    "stock": 7
 }
